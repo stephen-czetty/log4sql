@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Sql", "Log4Sql\Log4Sql.csproj", "{8021DA77-DB07-4A64-8F17-F3A991C030CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8021DA77-DB07-4A64-8F17-F3A991C030CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8021DA77-DB07-4A64-8F17-F3A991C030CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8021DA77-DB07-4A64-8F17-F3A991C030CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8021DA77-DB07-4A64-8F17-F3A991C030CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
