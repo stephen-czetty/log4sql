@@ -23,6 +23,7 @@ namespace Log4Sql
 
         public SqlLogger()
         {
+            _conversionPattern = "%d [%2t] %-5p   %m%n";
             var h = LogManager.GetRepository() as Hierarchy;
             if (h == null)
                 throw new SqlTypeException();  // Should never happen, unless log4net changes.
@@ -30,7 +31,7 @@ namespace Log4Sql
             h.Root.RemoveAllAppenders();
             var pl = new PatternLayout
                          {
-                             ConversionPattern = "%d [%2t] %-5p   %m%n"
+                             ConversionPattern = _conversionPattern
                          };
             pl.ActivateOptions();
 
@@ -38,7 +39,7 @@ namespace Log4Sql
                                    {
                                        AppendToFile = true,
                                        LockingModel = new FileAppender.MinimalLock(),
-                                       File = "test.log",
+                                       File = _fileName,
                                        Layout = pl
                                    };
             fileAppender.ActivateOptions();
@@ -54,6 +55,20 @@ namespace Log4Sql
         }
 
         private bool _isNull;
+        private string _conversionPattern;
+        private string _fileName;
+
+        public string ConversionPattern
+        {
+            get { return _conversionPattern; }
+            set { _conversionPattern = value; }
+        }
+
+        public string FileName
+        {
+            get { return _fileName; }
+            set { _fileName = value; }
+        }
 
         /// <summary>
         /// Indicates whether a structure is null. This property is read-only.
